@@ -7,15 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EEB5FEE4F619CE7A8666055 /* libPods-QQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE304E3CD10D65F9A9512DAD /* libPods-QQ.a */; };
+		87028FAC24C9697F00EA5BF9 /* WDHNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87028FAB24C9697F00EA5BF9 /* WDHNavigationBarView.m */; };
+		87028FAF24C9845C00EA5BF9 /* WDHAddContactsVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 87028FAE24C9845C00EA5BF9 /* WDHAddContactsVIew.m */; };
+		87028FB324C9A29100EA5BF9 /* WDHChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87028FB224C9A29100EA5BF9 /* WDHChatTableViewCell.m */; };
+		87028FB624CAAD1600EA5BF9 /* WDHTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87028FB524CAAD1600EA5BF9 /* WDHTableHeaderView.m */; };
+		87028FB924CAB1C400EA5BF9 /* WDHMyselfTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 87028FB824CAB1C400EA5BF9 /* WDHMyselfTextField.m */; };
+		87028FBC24CAC38B00EA5BF9 /* WDHChatroomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 87028FBB24CAC38B00EA5BF9 /* WDHChatroomVC.m */; };
+		87028FC024CAC5F200EA5BF9 /* WDHMyNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 87028FBF24CAC5F200EA5BF9 /* WDHMyNavigationBar.m */; };
 		87441AC524C95A5F00A595CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87441AC424C95A5F00A595CA /* AppDelegate.m */; };
 		87441AC824C95A5F00A595CA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87441AC724C95A5F00A595CA /* SceneDelegate.m */; };
-		87441ACB24C95A5F00A595CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87441ACA24C95A5F00A595CA /* ViewController.m */; };
 		87441ACE24C95A5F00A595CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87441ACC24C95A5F00A595CA /* Main.storyboard */; };
 		87441AD024C95A6200A595CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87441ACF24C95A6200A595CA /* Assets.xcassets */; };
 		87441AD324C95A6200A595CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87441AD124C95A6200A595CA /* LaunchScreen.storyboard */; };
 		87441AD624C95A6200A595CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87441AD524C95A6200A595CA /* main.m */; };
 		87441AE024C95A6200A595CA /* QQTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87441ADF24C95A6200A595CA /* QQTests.m */; };
 		87441AEB24C95A6300A595CA /* QQUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87441AEA24C95A6300A595CA /* QQUITests.m */; };
+		87441AFA24C9636900A595CA /* WDHNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 87441AF924C9636900A595CA /* WDHNewsVC.m */; };
+		8772F42B24D7B9A700A353C1 /* WDHSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772F42A24D7B9A700A353C1 /* WDHSegmentView.m */; };
+		8772F42E24D7ED0B00A353C1 /* WDHGroupChatTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772F42D24D7ED0B00A353C1 /* WDHGroupChatTableVC.m */; };
+		8772F43124D7EF2C00A353C1 /* WDHDeviceTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772F43024D7EF2C00A353C1 /* WDHDeviceTableVC.m */; };
+		8772F43424D7F27900A353C1 /* WDHAddressBookTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772F43324D7F27900A353C1 /* WDHAddressBookTableVC.m */; };
+		8772F43724D7F67D00A353C1 /* WDHSubscriptionNumberTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772F43624D7F67D00A353C1 /* WDHSubscriptionNumberTableVC.m */; };
+		8772F43C24D803AB00A353C1 /* WDHDynamicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772F43B24D803AB00A353C1 /* WDHDynamicVC.m */; };
+		8772F43F24D81B1900A353C1 /* WDHDynamicCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772F43E24D81B1900A353C1 /* WDHDynamicCollectionViewCell.m */; };
+		8772F44624D90AE000A353C1 /* UIImage+WDHGetMyselfImage_h.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772F44524D90AE000A353C1 /* UIImage+WDHGetMyselfImage_h.m */; };
+		8772F44924D9383300A353C1 /* WDHInputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772F44824D9383300A353C1 /* WDHInputTextView.m */; };
+		8772F44C24DAC57300A353C1 /* WDHLeftSildeMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772F44B24DAC57300A353C1 /* WDHLeftSildeMenuVC.m */; };
+		8772F44F24DAC64500A353C1 /* WDHMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772F44E24DAC64500A353C1 /* WDHMenuVC.m */; };
+		87C431CA24D2B91700B16FD1 /* WDHInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C431C924D2B91700B16FD1 /* WDHInputView.m */; };
+		87C431CE24D2CB6700B16FD1 /* WDHContactVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C431CD24D2CB6700B16FD1 /* WDHContactVC.m */; };
+		87C431DA24D4032A00B16FD1 /* WDHPartnerTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C431D924D4032A00B16FD1 /* WDHPartnerTableVC.m */; };
+		87C431DD24D423C200B16FD1 /* WDHGroupingTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C431DC24D423C200B16FD1 /* WDHGroupingTableVC.m */; };
+		87C431E124D4276A00B16FD1 /* WDHExpendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C431E024D4276A00B16FD1 /* WDHExpendCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +60,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87028FAA24C9697F00EA5BF9 /* WDHNavigationBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHNavigationBarView.h; sourceTree = "<group>"; };
+		87028FAB24C9697F00EA5BF9 /* WDHNavigationBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHNavigationBarView.m; sourceTree = "<group>"; };
+		87028FAD24C9845C00EA5BF9 /* WDHAddContactsVIew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHAddContactsVIew.h; sourceTree = "<group>"; };
+		87028FAE24C9845C00EA5BF9 /* WDHAddContactsVIew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHAddContactsVIew.m; sourceTree = "<group>"; };
+		87028FB124C9A29100EA5BF9 /* WDHChatTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHChatTableViewCell.h; sourceTree = "<group>"; };
+		87028FB224C9A29100EA5BF9 /* WDHChatTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHChatTableViewCell.m; sourceTree = "<group>"; };
+		87028FB424CAAD1600EA5BF9 /* WDHTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHTableHeaderView.h; sourceTree = "<group>"; };
+		87028FB524CAAD1600EA5BF9 /* WDHTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHTableHeaderView.m; sourceTree = "<group>"; };
+		87028FB724CAB1C400EA5BF9 /* WDHMyselfTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHMyselfTextField.h; sourceTree = "<group>"; };
+		87028FB824CAB1C400EA5BF9 /* WDHMyselfTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHMyselfTextField.m; sourceTree = "<group>"; };
+		87028FBA24CAC38B00EA5BF9 /* WDHChatroomVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHChatroomVC.h; sourceTree = "<group>"; };
+		87028FBB24CAC38B00EA5BF9 /* WDHChatroomVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHChatroomVC.m; sourceTree = "<group>"; };
+		87028FBE24CAC5F200EA5BF9 /* WDHMyNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHMyNavigationBar.h; sourceTree = "<group>"; };
+		87028FBF24CAC5F200EA5BF9 /* WDHMyNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHMyNavigationBar.m; sourceTree = "<group>"; };
 		87441AC024C95A5F00A595CA /* QQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87441AC324C95A5F00A595CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		87441AC424C95A5F00A595CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		87441AC624C95A5F00A595CA /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		87441AC724C95A5F00A595CA /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		87441AC924C95A5F00A595CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		87441ACA24C95A5F00A595CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		87441ACD24C95A5F00A595CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87441ACF24C95A6200A595CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87441AD224C95A6200A595CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +90,43 @@
 		87441AE624C95A6300A595CA /* QQUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QQUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87441AEA24C95A6300A595CA /* QQUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQUITests.m; sourceTree = "<group>"; };
 		87441AEC24C95A6300A595CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87441AF824C9636900A595CA /* WDHNewsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHNewsVC.h; sourceTree = "<group>"; };
+		87441AF924C9636900A595CA /* WDHNewsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHNewsVC.m; sourceTree = "<group>"; };
+		8772F42924D7B9A700A353C1 /* WDHSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHSegmentView.h; sourceTree = "<group>"; };
+		8772F42A24D7B9A700A353C1 /* WDHSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHSegmentView.m; sourceTree = "<group>"; };
+		8772F42C24D7ED0B00A353C1 /* WDHGroupChatTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHGroupChatTableVC.h; sourceTree = "<group>"; };
+		8772F42D24D7ED0B00A353C1 /* WDHGroupChatTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHGroupChatTableVC.m; sourceTree = "<group>"; };
+		8772F42F24D7EF2C00A353C1 /* WDHDeviceTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHDeviceTableVC.h; sourceTree = "<group>"; };
+		8772F43024D7EF2C00A353C1 /* WDHDeviceTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHDeviceTableVC.m; sourceTree = "<group>"; };
+		8772F43224D7F27900A353C1 /* WDHAddressBookTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHAddressBookTableVC.h; sourceTree = "<group>"; };
+		8772F43324D7F27900A353C1 /* WDHAddressBookTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHAddressBookTableVC.m; sourceTree = "<group>"; };
+		8772F43524D7F67D00A353C1 /* WDHSubscriptionNumberTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHSubscriptionNumberTableVC.h; sourceTree = "<group>"; };
+		8772F43624D7F67D00A353C1 /* WDHSubscriptionNumberTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHSubscriptionNumberTableVC.m; sourceTree = "<group>"; };
+		8772F43A24D803AB00A353C1 /* WDHDynamicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHDynamicVC.h; sourceTree = "<group>"; };
+		8772F43B24D803AB00A353C1 /* WDHDynamicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHDynamicVC.m; sourceTree = "<group>"; };
+		8772F43D24D81B1900A353C1 /* WDHDynamicCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHDynamicCollectionViewCell.h; sourceTree = "<group>"; };
+		8772F43E24D81B1900A353C1 /* WDHDynamicCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHDynamicCollectionViewCell.m; sourceTree = "<group>"; };
+		8772F44424D90AE000A353C1 /* UIImage+WDHGetMyselfImage_h.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+WDHGetMyselfImage_h.h"; sourceTree = "<group>"; };
+		8772F44524D90AE000A353C1 /* UIImage+WDHGetMyselfImage_h.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WDHGetMyselfImage_h.m"; sourceTree = "<group>"; };
+		8772F44724D9383300A353C1 /* WDHInputTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHInputTextView.h; sourceTree = "<group>"; };
+		8772F44824D9383300A353C1 /* WDHInputTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHInputTextView.m; sourceTree = "<group>"; };
+		8772F44A24DAC57300A353C1 /* WDHLeftSildeMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHLeftSildeMenuVC.h; sourceTree = "<group>"; };
+		8772F44B24DAC57300A353C1 /* WDHLeftSildeMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHLeftSildeMenuVC.m; sourceTree = "<group>"; };
+		8772F44D24DAC64500A353C1 /* WDHMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHMenuVC.h; sourceTree = "<group>"; };
+		8772F44E24DAC64500A353C1 /* WDHMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHMenuVC.m; sourceTree = "<group>"; };
+		87C431C824D2B91700B16FD1 /* WDHInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHInputView.h; sourceTree = "<group>"; };
+		87C431C924D2B91700B16FD1 /* WDHInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHInputView.m; sourceTree = "<group>"; };
+		87C431CC24D2CB6700B16FD1 /* WDHContactVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHContactVC.h; sourceTree = "<group>"; };
+		87C431CD24D2CB6700B16FD1 /* WDHContactVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHContactVC.m; sourceTree = "<group>"; };
+		87C431D824D4032A00B16FD1 /* WDHPartnerTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHPartnerTableVC.h; sourceTree = "<group>"; };
+		87C431D924D4032A00B16FD1 /* WDHPartnerTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHPartnerTableVC.m; sourceTree = "<group>"; };
+		87C431DB24D423C200B16FD1 /* WDHGroupingTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHGroupingTableVC.h; sourceTree = "<group>"; };
+		87C431DC24D423C200B16FD1 /* WDHGroupingTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHGroupingTableVC.m; sourceTree = "<group>"; };
+		87C431DF24D4276A00B16FD1 /* WDHExpendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDHExpendCell.h; sourceTree = "<group>"; };
+		87C431E024D4276A00B16FD1 /* WDHExpendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDHExpendCell.m; sourceTree = "<group>"; };
+		BB8CFE7706316769AFA2A9D5 /* Pods-QQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQ.debug.xcconfig"; path = "Target Support Files/Pods-QQ/Pods-QQ.debug.xcconfig"; sourceTree = "<group>"; };
+		EE304E3CD10D65F9A9512DAD /* libPods-QQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QQ.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60A7FF25938C9CE765D8690 /* Pods-QQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQ.release.xcconfig"; path = "Target Support Files/Pods-QQ/Pods-QQ.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EEB5FEE4F619CE7A8666055 /* libPods-QQ.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +155,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		216E01B3522844CCB4F34E61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB8CFE7706316769AFA2A9D5 /* Pods-QQ.debug.xcconfig */,
+				F60A7FF25938C9CE765D8690 /* Pods-QQ.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		87028FB024C9A23100EA5BF9 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				87028FBD24CAC39200EA5BF9 /* ChatRoom */,
+				87441AF824C9636900A595CA /* WDHNewsVC.h */,
+				87441AF924C9636900A595CA /* WDHNewsVC.m */,
+				87028FAD24C9845C00EA5BF9 /* WDHAddContactsVIew.h */,
+				87028FAE24C9845C00EA5BF9 /* WDHAddContactsVIew.m */,
+				87028FB124C9A29100EA5BF9 /* WDHChatTableViewCell.h */,
+				87028FB224C9A29100EA5BF9 /* WDHChatTableViewCell.m */,
+				87028FB724CAB1C400EA5BF9 /* WDHMyselfTextField.h */,
+				87028FB824CAB1C400EA5BF9 /* WDHMyselfTextField.m */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+		87028FBD24CAC39200EA5BF9 /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				87028FBA24CAC38B00EA5BF9 /* WDHChatroomVC.h */,
+				87028FBB24CAC38B00EA5BF9 /* WDHChatroomVC.m */,
+				87028FBE24CAC5F200EA5BF9 /* WDHMyNavigationBar.h */,
+				87028FBF24CAC5F200EA5BF9 /* WDHMyNavigationBar.m */,
+				87C431C824D2B91700B16FD1 /* WDHInputView.h */,
+				87C431C924D2B91700B16FD1 /* WDHInputView.m */,
+			);
+			name = ChatRoom;
+			sourceTree = "<group>";
+		};
 		87441AB724C95A5F00A595CA = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +200,8 @@
 				87441ADE24C95A6200A595CA /* QQTests */,
 				87441AE924C95A6300A595CA /* QQUITests */,
 				87441AC124C95A5F00A595CA /* Products */,
+				216E01B3522844CCB4F34E61 /* Pods */,
+				93E3488C2D4E5F3B42F7590D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,12 +218,14 @@
 		87441AC224C95A5F00A595CA /* QQ */ = {
 			isa = PBXGroup;
 			children = (
+				8772F44024D8221300A353C1 /* PublicSection */,
+				87C431CB24D2CAFD00B16FD1 /* Contact */,
+				87028FB024C9A23100EA5BF9 /* News */,
+				8772F43924D8037900A353C1 /* Dynamic */,
 				87441AC324C95A5F00A595CA /* AppDelegate.h */,
 				87441AC424C95A5F00A595CA /* AppDelegate.m */,
 				87441AC624C95A5F00A595CA /* SceneDelegate.h */,
 				87441AC724C95A5F00A595CA /* SceneDelegate.m */,
-				87441AC924C95A5F00A595CA /* ViewController.h */,
-				87441ACA24C95A5F00A595CA /* ViewController.m */,
 				87441ACC24C95A5F00A595CA /* Main.storyboard */,
 				87441ACF24C95A6200A595CA /* Assets.xcassets */,
 				87441AD124C95A6200A595CA /* LaunchScreen.storyboard */,
@@ -137,6 +253,77 @@
 			path = QQUITests;
 			sourceTree = "<group>";
 		};
+		8772F43924D8037900A353C1 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				8772F43A24D803AB00A353C1 /* WDHDynamicVC.h */,
+				8772F43B24D803AB00A353C1 /* WDHDynamicVC.m */,
+				8772F43D24D81B1900A353C1 /* WDHDynamicCollectionViewCell.h */,
+				8772F43E24D81B1900A353C1 /* WDHDynamicCollectionViewCell.m */,
+			);
+			name = Dynamic;
+			sourceTree = "<group>";
+		};
+		8772F44024D8221300A353C1 /* PublicSection */ = {
+			isa = PBXGroup;
+			children = (
+				87028FAA24C9697F00EA5BF9 /* WDHNavigationBarView.h */,
+				87028FAB24C9697F00EA5BF9 /* WDHNavigationBarView.m */,
+				87028FB424CAAD1600EA5BF9 /* WDHTableHeaderView.h */,
+				87028FB524CAAD1600EA5BF9 /* WDHTableHeaderView.m */,
+				8772F44424D90AE000A353C1 /* UIImage+WDHGetMyselfImage_h.h */,
+				8772F44524D90AE000A353C1 /* UIImage+WDHGetMyselfImage_h.m */,
+				8772F44724D9383300A353C1 /* WDHInputTextView.h */,
+				8772F44824D9383300A353C1 /* WDHInputTextView.m */,
+				8772F44A24DAC57300A353C1 /* WDHLeftSildeMenuVC.h */,
+				8772F44B24DAC57300A353C1 /* WDHLeftSildeMenuVC.m */,
+				8772F44D24DAC64500A353C1 /* WDHMenuVC.h */,
+				8772F44E24DAC64500A353C1 /* WDHMenuVC.m */,
+			);
+			name = PublicSection;
+			sourceTree = "<group>";
+		};
+		87C431CB24D2CAFD00B16FD1 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				87C431CF24D2EB5500B16FD1 /* WDHSegmentView */,
+				87C431CC24D2CB6700B16FD1 /* WDHContactVC.h */,
+				87C431CD24D2CB6700B16FD1 /* WDHContactVC.m */,
+				87C431D824D4032A00B16FD1 /* WDHPartnerTableVC.h */,
+				87C431D924D4032A00B16FD1 /* WDHPartnerTableVC.m */,
+				87C431DB24D423C200B16FD1 /* WDHGroupingTableVC.h */,
+				87C431DC24D423C200B16FD1 /* WDHGroupingTableVC.m */,
+				87C431DF24D4276A00B16FD1 /* WDHExpendCell.h */,
+				87C431E024D4276A00B16FD1 /* WDHExpendCell.m */,
+				8772F42C24D7ED0B00A353C1 /* WDHGroupChatTableVC.h */,
+				8772F42D24D7ED0B00A353C1 /* WDHGroupChatTableVC.m */,
+				8772F42F24D7EF2C00A353C1 /* WDHDeviceTableVC.h */,
+				8772F43024D7EF2C00A353C1 /* WDHDeviceTableVC.m */,
+				8772F43224D7F27900A353C1 /* WDHAddressBookTableVC.h */,
+				8772F43324D7F27900A353C1 /* WDHAddressBookTableVC.m */,
+				8772F43524D7F67D00A353C1 /* WDHSubscriptionNumberTableVC.h */,
+				8772F43624D7F67D00A353C1 /* WDHSubscriptionNumberTableVC.m */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
+		87C431CF24D2EB5500B16FD1 /* WDHSegmentView */ = {
+			isa = PBXGroup;
+			children = (
+				8772F42924D7B9A700A353C1 /* WDHSegmentView.h */,
+				8772F42A24D7B9A700A353C1 /* WDHSegmentView.m */,
+			);
+			path = WDHSegmentView;
+			sourceTree = "<group>";
+		};
+		93E3488C2D4E5F3B42F7590D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE304E3CD10D65F9A9512DAD /* libPods-QQ.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +331,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87441AEF24C95A6300A595CA /* Build configuration list for PBXNativeTarget "QQ" */;
 			buildPhases = (
+				D76E6A7E191562FEFC4A27C7 /* [CP] Check Pods Manifest.lock */,
 				87441ABC24C95A5F00A595CA /* Sources */,
 				87441ABD24C95A5F00A595CA /* Frameworks */,
 				87441ABE24C95A5F00A595CA /* Resources */,
@@ -199,6 +387,7 @@
 		87441AB824C95A5F00A595CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WDH;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "魏敦豪";
 				TargetAttributes = {
@@ -262,15 +451,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D76E6A7E191562FEFC4A27C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QQ-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		87441ABC24C95A5F00A595CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87441ACB24C95A5F00A595CA /* ViewController.m in Sources */,
+				87C431CE24D2CB6700B16FD1 /* WDHContactVC.m in Sources */,
+				87028FC024CAC5F200EA5BF9 /* WDHMyNavigationBar.m in Sources */,
+				8772F43C24D803AB00A353C1 /* WDHDynamicVC.m in Sources */,
+				87028FAC24C9697F00EA5BF9 /* WDHNavigationBarView.m in Sources */,
+				8772F44C24DAC57300A353C1 /* WDHLeftSildeMenuVC.m in Sources */,
+				8772F43F24D81B1900A353C1 /* WDHDynamicCollectionViewCell.m in Sources */,
+				8772F43124D7EF2C00A353C1 /* WDHDeviceTableVC.m in Sources */,
+				87028FB324C9A29100EA5BF9 /* WDHChatTableViewCell.m in Sources */,
+				8772F44924D9383300A353C1 /* WDHInputTextView.m in Sources */,
+				87028FB924CAB1C400EA5BF9 /* WDHMyselfTextField.m in Sources */,
+				8772F42B24D7B9A700A353C1 /* WDHSegmentView.m in Sources */,
 				87441AC524C95A5F00A595CA /* AppDelegate.m in Sources */,
 				87441AD624C95A6200A595CA /* main.m in Sources */,
+				8772F44F24DAC64500A353C1 /* WDHMenuVC.m in Sources */,
+				8772F44624D90AE000A353C1 /* UIImage+WDHGetMyselfImage_h.m in Sources */,
+				87028FBC24CAC38B00EA5BF9 /* WDHChatroomVC.m in Sources */,
+				8772F42E24D7ED0B00A353C1 /* WDHGroupChatTableVC.m in Sources */,
+				87C431E124D4276A00B16FD1 /* WDHExpendCell.m in Sources */,
+				87C431CA24D2B91700B16FD1 /* WDHInputView.m in Sources */,
+				8772F43724D7F67D00A353C1 /* WDHSubscriptionNumberTableVC.m in Sources */,
+				87441AFA24C9636900A595CA /* WDHNewsVC.m in Sources */,
 				87441AC824C95A5F00A595CA /* SceneDelegate.m in Sources */,
+				8772F43424D7F27900A353C1 /* WDHAddressBookTableVC.m in Sources */,
+				87C431DD24D423C200B16FD1 /* WDHGroupingTableVC.m in Sources */,
+				87028FB624CAAD1600EA5BF9 /* WDHTableHeaderView.m in Sources */,
+				87C431DA24D4032A00B16FD1 /* WDHPartnerTableVC.m in Sources */,
+				87028FAF24C9845C00EA5BF9 /* WDHAddContactsVIew.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,10 +674,13 @@
 		};
 		87441AF024C95A6300A595CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB8CFE7706316769AFA2A9D5 /* Pods-QQ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SVXA6C4R6;
 				INFOPLIST_FILE = QQ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,10 +693,13 @@
 		};
 		87441AF124C95A6300A595CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60A7FF25938C9CE765D8690 /* Pods-QQ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SVXA6C4R6;
 				INFOPLIST_FILE = QQ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

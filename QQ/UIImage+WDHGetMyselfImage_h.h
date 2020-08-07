@@ -11,6 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImage (WDHGetMyselfImage_h)
+//获取一个圆形图片 类方法
++(instancetype) WDHGetCircleImageWith:(NSString *)name;
+//获取一个圆形图片
+-(instancetype) WDHCircleImage;
+
+- (UIImage *) scaleImage:(UIImage *)image toScale:(float)scaleSize;
 
 @end
 

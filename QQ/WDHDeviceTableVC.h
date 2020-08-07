@@ -1,5 +1,5 @@
 //
-//  WDHdeviceTableVC.h
+//  WDHDeviceTableVC.h
 //  QQ
 //
 //  Created by 敦豪魏 on 2020/8/3.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WDHdeviceTableVC : UITableViewController
+@interface WDHDeviceTableVC : UITableViewController
 
 @end
 

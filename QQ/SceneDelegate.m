@@ -7,20 +7,57 @@
 //
 
 #import "SceneDelegate.h"
-
-@interface SceneDelegate ()
-
+#import "WDHNewsVC.h"
+#import "WDHContactVC.h"
+#import "WDHDynamicVC.h"
+#import "WDHLeftSildeMenuVC.h"
+#import "WDHMenuVC.h"
+#import "WDHNavigationBarView.h"
+#
+@interface SceneDelegate ()<WDHNavigationBarViewDelegate>
+@property (nonatomic,strong) WDHLeftSildeMenuVC *slideVC;
 @end
 
 @implementation SceneDelegate
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-    // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-    // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-}
 
+    
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    //消息界面
+    WDHNewsVC *newsView = [[WDHNewsVC alloc] init];
+    UINavigationController *nc1 = [[UINavigationController alloc] initWithRootViewController:newsView];
+    nc1.navigationBar.barTintColor = [UIColor blueColor];
+    
+    
+    //联系人界面
+    WDHContactVC *contactVC = [[WDHContactVC alloc] init];
+    UINavigationController *nc2 = [[UINavigationController alloc] initWithRootViewController:contactVC];
+    nc2.navigationBar.barTintColor = [UIColor blueColor];
+
+    //动态界面
+    WDHDynamicVC *dynamic = [[WDHDynamicVC alloc] init];
+    UINavigationController *nc3 = [[UINavigationController alloc] initWithRootViewController:dynamic];
+    nc3.navigationBar.barTintColor = [UIColor blueColor];
+    dynamic.searchBar.delegate = self;
+    [tabBar setViewControllers:@[nc1,nc2,nc3] animated:YES];
+    //添加一个外层的Navigation控制器来实现全屏滑动
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabBar];
+    //自定义的最底层VC
+    _slideVC = [[WDHLeftSildeMenuVC alloc] initWithMainVC:nav leftMenuVC:[WDHMenuVC new]];
+    newsView.openLeftBlock = ^{
+        [self.slideVC switchMenu];
+    };
+    //隐藏上方导航栏
+    [tabBar.navigationController setNavigationBarHidden:YES animated:YES];
+    [self.window setRootViewController:_slideVC];
+    
+}
+//打开右侧菜单    
+-(void)OpenLeftMenu{
+    [_slideVC switchMenu];
+}
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.

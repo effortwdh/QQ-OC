@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "WDHNavigationBarView.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WDHDynamicVC : UIViewController
-
+@property (nonatomic,strong)WDHNavigationBarView *searchBar;
 @end
 
 NS_ASSUME_NONNULL_END

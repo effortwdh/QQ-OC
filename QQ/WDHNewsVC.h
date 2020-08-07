@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+typedef void(^OpenLeftMenuBlock)(void);
 @interface WDHNewsVC : UIViewController
+@property (nonatomic,copy) OpenLeftMenuBlock openLeftBlock;
 
 @end
 

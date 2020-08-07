@@ -7,7 +7,9 @@
 //
 
 #import "WDHMenuVC.h"
-
+#import "UIImage+WDHGetMyselfImage_h.h"
+#define H ([UIScreen mainScreen].bounds.size.height)
+#define W ([UIScreen mainScreen].bounds.size.width)
 @interface WDHMenuVC ()
 
 @end
@@ -16,17 +18,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blueColor];
+    UIImageView *QQImage = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 65, 65)];
+    QQImage.image = [UIImage WDHGetCircleImageWith:@"头像"];
+    [self.view addSubview:QQImage];
+    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(W-60,66, 50, 50)];
+    [backButton setBackgroundColor:[UIColor redColor]];
+    [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+//    [backButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [self.view addSubview:backButton];
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)back{
+    self.backBlock();
 }
-*/
-
 @end

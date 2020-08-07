@@ -11,7 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WDHDynamicCollectionViewCell : UICollectionViewCell
-
+//动态图片
+@property (nonatomic,strong) UIImageView *dynamicImage;
+//动态名称
+@property (nonatomic,strong) UILabel *dynamicLabel;
 @end
 
 NS_ASSUME_NONNULL_END

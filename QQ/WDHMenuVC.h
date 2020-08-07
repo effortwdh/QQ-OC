@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+typedef void(^ backButtonBlock)(void);
 @interface WDHMenuVC : UIViewController
-
+@property (nonatomic,copy) backButtonBlock backBlock;
 @end
 
 NS_ASSUME_NONNULL_END

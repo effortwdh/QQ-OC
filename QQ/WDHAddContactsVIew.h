@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WDHAddContactsVIew : UIView
-
+-(void)showViewFromPoint:(CGPoint) pointk clickBlock:(dispatch_block_t) clickBlock;
 @end
 
 NS_ASSUME_NONNULL_END

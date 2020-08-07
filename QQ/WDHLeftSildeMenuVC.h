@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WDHLeftSildeMenuVC : UIViewController
 
+/// 初始化方法
+- (instancetype)initWithMainVC:(UIViewController *)mainVC leftMenuVC:(UIViewController *)leftMenuVC;
+
+/// 打开关闭菜单
+- (void)switchMenu;
+
 @end
 
 NS_ASSUME_NONNULL_END

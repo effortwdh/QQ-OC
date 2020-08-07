@@ -11,7 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WDHExpendCell : UITableViewCell
-
+//靠左图片
+@property (nonatomic,strong) UIImageView *leftImage;
+//文字内容
+@property (nonatomic,strong) UILabel *QQName;
+//QQ动态
+@property (nonatomic,strong) UILabel *QQDynamic;
 @end
 
 NS_ASSUME_NONNULL_END

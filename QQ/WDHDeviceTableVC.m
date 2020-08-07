@@ -1,50 +1,54 @@
 //
-//  WDHdeviceTableVC.m
+//  WDHDeviceTableVC.m
 //  QQ
 //
 //  Created by 敦豪魏 on 2020/8/3.
 //  Copyright © 2020 魏敦豪. All rights reserved.
 //
 
-#import "WDHdeviceTableVC.h"
-
-@interface WDHdeviceTableVC ()
+#import "WDHDeviceTableVC.h"
+#import "WDHExpendCell.h"
+@interface WDHDeviceTableVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
-@implementation WDHdeviceTableVC
+@implementation WDHDeviceTableVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return 2;
 }
-
-/*
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    WDHExpendCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"device"];
+    if(!cell){
+        cell = [[WDHExpendCell alloc] initWithStyle:(UITableViewCellStyleSubtitle) reuseIdentifier:@"device"];
+    }
+    if(indexPath.row == 0)
+    {
+        cell.leftImage.image = [UIImage imageNamed:@"ic_appeal"];
+        cell.QQName.text = @"我的电脑";
+        cell.QQDynamic.text = @"[在线]";
+    }
+    if(indexPath.row == 1)
+    {
+        cell.leftImage.image = [UIImage imageNamed:@"ic_appeal"];
+        cell.QQName.text = @"发现新设备";
+        cell.QQDynamic.text = @"搜索附件的设备，用QQ轻松连接设备";
+    }
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

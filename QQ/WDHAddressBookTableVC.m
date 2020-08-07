@@ -7,8 +7,8 @@
 //
 
 #import "WDHAddressBookTableVC.h"
-
-@interface WDHAddressBookTableVC ()
+#import "WDHExpendCell.h"
+@interface WDHAddressBookTableVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
@@ -16,78 +16,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.delegate =self;
+    self.tableView.dataSource = self;
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return 30;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    WDHExpendCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"AddressBook"];
+    if(!cell){
+        cell = [[WDHExpendCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"AddressBook"];
+    }
+    UIButton *addPeople = [[UIButton alloc] initWithFrame:CGRectMake(self.tableView.bounds.size.width-100,(80-20)/2,80, 20)];
+    [addPeople setTitle:@"添加" forState:UIControlStateNormal];
+    addPeople.backgroundColor = [UIColor grayColor];
+    [addPeople setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    addPeople.layer.cornerRadius = 8;
+    [cell addSubview:addPeople];
+    cell.leftImage.image = [UIImage imageNamed:@"ic_appeal"];
+    cell.QQName.text = @"QQ名称";
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark - Table view delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

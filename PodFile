@@ -1,0 +1,4 @@
+target 'QQ' do
+    pod 'AFNetworking'
+    pod 'Masonry'
+end
