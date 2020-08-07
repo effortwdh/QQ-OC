@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WDHChatTableViewCell.h
 //  QQ
 //
 //  Created by 敦豪魏 on 2020/7/23.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface WDHChatTableViewCell : UITableViewCell
 
 @end
 
+NS_ASSUME_NONNULL_END
