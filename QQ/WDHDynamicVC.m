@@ -30,8 +30,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     //设置导航栏视图
     self.navigationItem.title = @"QQ名称";
-    _searchBar = [[WDHNavigationBarView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 46)];
-    _searchBar.navagationBarViewType = WDHNavigationBarViewDynamic;
+    _searchBar = [[WDHNavigationBarView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 46)navigationBarViewType:WDHNavigationBarViewDynamic];
     [self.navigationItem setTitleView:_searchBar];
     _searchBar.block=^(void){
         NSLog(@"开启摄像头");
@@ -54,6 +53,14 @@
     self.QQCollectionView.contentInset = UIEdgeInsetsMake(0, 0, 80, 0);
     //隐藏滚动条
     self.QQCollectionView.showsVerticalScrollIndicator = NO;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
+    tap.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tap];
+}
+//收回键盘
+- (void)viewTapped:(UITapGestureRecognizer *) tap1{
+    [self.view endEditing:YES];
 }
 //初始化TabBer
 - (void)initTabBer{

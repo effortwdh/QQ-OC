@@ -177,7 +177,11 @@ static CGFloat Font_Selected_size = 0;
 - (UIView *)bottomLineView {
     if (!_bottomLineView) {
         _bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, SegmentViewHeight, _size.width, 5)];
-        _bottomLineView.backgroundColor = [UIColor systemGroupedBackgroundColor];
+        if (@available(iOS 13.0, *)) {
+            _bottomLineView.backgroundColor = [UIColor systemGroupedBackgroundColor];
+        } else {
+            _bottomLineView.backgroundColor = [UIColor whiteColor];
+        }
         _ScrollView_Y = SegmentViewHeight + 5;
     }
     return _bottomLineView;

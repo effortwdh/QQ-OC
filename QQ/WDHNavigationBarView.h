@@ -31,6 +31,8 @@ typedef void(^TouchQQIamgeBlock)(void);
 @property(nonatomic,assign) WDHNavigationBarViewType navagationBarViewType;
 //打开左边菜单 之所以使用weak 是为了防止循环引用
 @property(nonatomic,weak) id<WDHNavigationBarViewDelegate>delegate;
+//初始化
+-(instancetype)initWithFrame:(CGRect)frame navigationBarViewType:(WDHNavigationBarViewType)navigationBarViewType;
 @end
 
 NS_ASSUME_NONNULL_END

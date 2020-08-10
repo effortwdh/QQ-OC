@@ -107,6 +107,18 @@
      addObserver:self selector:@selector(keyboardWillDisAppear:)
      name:UIKeyboardWillHideNotification
      object:nil];
+     //加左滑back 手势
+     UIPanGestureRecognizer *tap = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
+     tap.cancelsTouchesInView = NO;
+     [self.view addGestureRecognizer:tap];
+}
+//back
+- (void)viewTapped:(UIPanGestureRecognizer *) tap1{
+    // pan手势 根据偏移进行具体的判断
+    CGPoint offsetPoint = [tap1 translationInView:self.view];
+    if(offsetPoint.x > 0){
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 //预存好 数据
 -(void)setDate{

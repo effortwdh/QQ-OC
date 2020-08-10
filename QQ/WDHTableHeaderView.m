@@ -44,7 +44,23 @@
             break;
         }
         case WDHTableHeaderViewTypeContact:{
-            
+            //添加搜索栏
+            WDHMyselfTextField *textField =[[WDHMyselfTextField alloc] initWithFrame:CGRectMake(10, 5,self.frame.size.width-10*2 , self.frame.size.height/2-10)];
+            [self addSubview:textField];
+            //添加按钮
+            UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0,self.frame.size.height/2-10+10, self.frame.size.width, self.frame.size.height/2-10)];
+            button.backgroundColor =[UIColor whiteColor];
+            //添加文字
+            [button setTitle:@"新朋友" forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+            button.contentEdgeInsets = UIEdgeInsetsMake(0, 20, 0, 0);
+            button.titleLabel.font = [UIFont systemFontOfSize:15];
+            //添加图片
+            [button setImage:[UIImage imageNamed:@"icon_goselect"] forState:UIControlStateNormal];
+            button.imageEdgeInsets = UIEdgeInsetsMake(0, 330, 0, 0);
+            [self addSubview:button];
+            break;
         }
         case WDHTableHeaderViewTypeDynamic:{
             //添加搜索栏

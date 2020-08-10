@@ -30,8 +30,7 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"QQ名称";    //设置导航栏视图
-    WDHNavigationBarView *searchBar = [[WDHNavigationBarView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 46)];
-    searchBar.navagationBarViewType = WDHNavigationBarViewNews;
+    WDHNavigationBarView *searchBar = [[WDHNavigationBarView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 46) navigationBarViewType:WDHNavigationBarViewNews];
     [self.navigationItem setTitleView:searchBar];
     searchBar.block=^(void){
         NSLog(@"开启摄像头");
@@ -49,6 +48,7 @@
     WDHTableHeaderView *headerView = [[WDHTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
     headerView.type = WDHTableHeaderViewTypeNews;
     self.tableView.tableHeaderView = headerView;
+    //回收键盘
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
     tap.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tap];

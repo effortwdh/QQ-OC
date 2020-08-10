@@ -16,8 +16,10 @@
 #import "WDHSubscriptionNumberTableVC.h"
 #import "WDHNavigationBarView.h"
 #import "WDHMyselfTextField.h"
+#import "WDHTableHeaderView.h"
 @interface WDHContactVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) UITableView *QQTableView;
+@property (nonatomic,strong) WDHNavigationBarView *searchBar;
 @end
 
 @implementation WDHContactVC
@@ -26,18 +28,16 @@
     if(self){
         self.tabBarItem.image = [UIImage imageNamed:@"联系人"];
         self.tabBarItem.title = @"联系人";
-        
     }
     return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+
     self.navigationItem.title = @"QQ名称";    //设置导航栏视图
-    WDHNavigationBarView *searchBar = [[WDHNavigationBarView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 46)];
-    searchBar.navagationBarViewType = WDHNavigationBarViewContact;
-    [self.navigationItem setTitleView:searchBar];
-    searchBar.block=^(void){
+    _searchBar = [self searchBar];
+    _searchBar.block=^(void){
         NSLog(@"开启摄像头");
     };
     self.QQTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64,self.view.bounds.size.width, [UIScreen mainScreen].bounds.size.height - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
@@ -93,24 +93,20 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 100)];
     view.backgroundColor = [UIColor whiteColor];
-    //添加搜索栏
-    WDHMyselfTextField *textField =[[WDHMyselfTextField alloc] initWithFrame:CGRectMake(10, 5,view.bounds.size.width-10*2 , view.bounds.size.height/2-10)];
-    [view addSubview:textField];
-    //添加按钮
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0,view.bounds.size.height/2-10+10, view.bounds.size.width, view.bounds.size.height/2-10)];
-    button.backgroundColor =[UIColor whiteColor];
-    //添加文字
-    [button setTitle:@"新朋友" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    button.contentEdgeInsets = UIEdgeInsetsMake(0, 20, 0, 0);
-    button.titleLabel.font = [UIFont systemFontOfSize:15];
-    //添加图片
-    [button setImage:[UIImage imageNamed:@"icon_goselect"] forState:UIControlStateNormal];
-    button.imageEdgeInsets = UIEdgeInsetsMake(0, 330, 0, 0);
+    WDHTableHeaderView *headerView =  [[WDHTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
+    headerView.type = WDHTableHeaderViewTypeContact;
+    [view addSubview:headerView];
     
-    [view addSubview:button];
+    //回收键盘
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
+    tap.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tap];
     return view;
+    
+}
+//收回键盘
+- (void)viewTapped:(UITapGestureRecognizer *) tap1{
+    [self.view endEditing:YES];
 }
 #pragma mark table delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -121,6 +117,9 @@
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat headerViewHeight = 100.0;
+    
+    CGFloat bottomCellOffset = [self.QQTableView rectForSection:0].origin.y;
+    NSLog(@"%f",bottomCellOffset);
     
     if (scrollView.contentOffset.y < headerViewHeight && scrollView.contentOffset.y >= 0) {
         scrollView.contentInset = UIEdgeInsetsMake(- scrollView.contentOffset.y, 0, 0, 0);
@@ -145,4 +144,11 @@
 //    }
 //    self.tableView.showsVerticalScrollIndicator = _canScroll?YES:NO;
 //}
+- (WDHNavigationBarView *)searchBar {
+    if(!_searchBar) {
+        _searchBar = [[WDHNavigationBarView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 46) navigationBarViewType:WDHNavigationBarViewContact];
+        [self.navigationItem setTitleView:_searchBar];
+    }
+    return _searchBar;
+}
 @end

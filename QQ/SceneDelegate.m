@@ -16,49 +16,54 @@
 #
 @interface SceneDelegate ()<WDHNavigationBarViewDelegate>
 @property (nonatomic,strong) WDHLeftSildeMenuVC *slideVC;
+@property (nonatomic,strong) WDHContactVC *contactVC;
 @end
 
 @implementation SceneDelegate
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
+    if(@available(iOS 13.0,*)){
+        UITabBarController *tabBar = [[UITabBarController alloc] init];
+        //消息界面
+        WDHNewsVC *newsView = [[WDHNewsVC alloc] init];
+        UINavigationController *nc1 = [[UINavigationController alloc] initWithRootViewController:newsView];
+        nc1.navigationBar.barTintColor = [UIColor blueColor];
+        
+        //联系人界面
+        _contactVC = [self contactVC];
+        UINavigationController *nc2 = [[UINavigationController alloc] initWithRootViewController:_contactVC];
+        nc2.navigationBar.barTintColor = [UIColor blueColor];
 
-    
-    UITabBarController *tabBar = [[UITabBarController alloc] init];
-    //消息界面
-    WDHNewsVC *newsView = [[WDHNewsVC alloc] init];
-    UINavigationController *nc1 = [[UINavigationController alloc] initWithRootViewController:newsView];
-    nc1.navigationBar.barTintColor = [UIColor blueColor];
-    
-    
-    //联系人界面
-    WDHContactVC *contactVC = [[WDHContactVC alloc] init];
-    UINavigationController *nc2 = [[UINavigationController alloc] initWithRootViewController:contactVC];
-    nc2.navigationBar.barTintColor = [UIColor blueColor];
-
-    //动态界面
-    WDHDynamicVC *dynamic = [[WDHDynamicVC alloc] init];
-    UINavigationController *nc3 = [[UINavigationController alloc] initWithRootViewController:dynamic];
-    nc3.navigationBar.barTintColor = [UIColor blueColor];
-    dynamic.searchBar.delegate = self;
-    [tabBar setViewControllers:@[nc1,nc2,nc3] animated:YES];
-    //添加一个外层的Navigation控制器来实现全屏滑动
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabBar];
-    //自定义的最底层VC
-    _slideVC = [[WDHLeftSildeMenuVC alloc] initWithMainVC:nav leftMenuVC:[WDHMenuVC new]];
-    newsView.openLeftBlock = ^{
-        [self.slideVC switchMenu];
-    };
-    //隐藏上方导航栏
-    [tabBar.navigationController setNavigationBarHidden:YES animated:YES];
-    [self.window setRootViewController:_slideVC];
-    
+        //动态界面
+        WDHDynamicVC *dynamic = [[WDHDynamicVC alloc] init];
+        UINavigationController *nc3 = [[UINavigationController alloc] initWithRootViewController:dynamic];
+        nc3.navigationBar.barTintColor = [UIColor blueColor];
+        dynamic.searchBar.delegate = self;
+        [tabBar setViewControllers:@[nc1,nc2,nc3] animated:YES];
+        //添加一个外层的Navigation控制器来实现全屏滑动
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabBar];
+        //自定义的最底层VC
+        _slideVC = [[WDHLeftSildeMenuVC alloc] initWithMainVC:nav leftMenuVC:[WDHMenuVC new]];
+        newsView.openLeftBlock = ^{
+            [self.slideVC switchMenu];
+        };
+        //隐藏上方导航栏
+        [tabBar.navigationController setNavigationBarHidden:YES animated:YES];
+        [self.window setRootViewController:_slideVC];
+    }
 }
 //打开右侧菜单    
 -(void)OpenLeftMenu{
     [_slideVC switchMenu];
 }
 
+-(WDHContactVC *)contactVC{
+    if(!_contactVC){
+        _contactVC = [[WDHContactVC alloc] init];
+    }
+    return _contactVC;
+}
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.
     // This occurs shortly after the scene enters the background, or when its session is discarded.
